@@ -44,7 +44,7 @@ Write-Host "------------------------------------------`n" -ForegroundColor DarkG
 
 
 if (Test-Path $usernameCachePath) {
-    Write-Host "`n📁 usernamecache.json:" -ForegroundColor Cyan
+    Write-Host "Altri account trovati in usernamecache.json:" -ForegroundColor Cyan
     $usernameData = Get-Content -Raw -Path $usernameCachePath | ConvertFrom-Json
     $names = $usernameData | ForEach-Object { $_.PSObject.Properties.Value } | Where-Object { $_ }
 
@@ -64,7 +64,7 @@ if (Test-Path $usernameCachePath) {
 }
 
 if (Test-Path $userCachePath) {
-    Write-Host "`n📁 usercache.json:" -ForegroundColor Cyan
+    Write-Host "Altri account trovati in usercache.json:" -ForegroundColor Cyan
     $userData = Get-Content -Raw -Path $userCachePath | ConvertFrom-Json
     $names = $userData | Select-Object -ExpandProperty name | Where-Object { $_ }
 
@@ -82,4 +82,5 @@ if (Test-Path $userCachePath) {
 } else {
     Write-Host "Il file usercache.json non esiste nella cartella .minecraft." -ForegroundColor Red
 }
+
 
