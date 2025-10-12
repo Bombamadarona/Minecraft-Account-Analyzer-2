@@ -14,7 +14,7 @@ function Test-NickPremium {
         if ($_.Exception.Response.StatusCode.value__ -eq 404) {
             return $false
         } elseif ($_.Exception.Response.StatusCode.value__ -eq 429) {
-            Write-Host "⏳ Rate limit raggiunto. Attendo 5 secondi..." -ForegroundColor DarkGray
+            Write-Host "Rate limit raggiunto. Attendo 5 secondi..." -ForegroundColor DarkGray
             Start-Sleep -Seconds 5
             return Test-NickPremium -Nickname $Nickname
         } else {
@@ -82,5 +82,6 @@ if (Test-Path $userCachePath) {
 } else {
     Write-Host "Il file usercache.json non esiste nella cartella .minecraft." -ForegroundColor Red
 }
+
 
 
