@@ -55,12 +55,12 @@ if (Test-Path $usernameCachePath) {
         } elseif ($isPremium -eq $false) {
             Write-Host "- $name [SP]" -ForegroundColor Yellow
         } else {
-            Write-Host "- $name [Errore durante la verifica]" -ForegroundColor Red
+            Write-Host "- $name [ERRORE] Impossibile effettuare la verifica" -ForegroundColor Red
         }
         Start-Sleep -Seconds 2
     }
 } else {
-    Write-Host "Il file usernamecache.json non esiste nella cartella .minecraft." -ForegroundColor Red
+    Write-Host "[ERRORE] Il file usernamecache.json non esiste nella cartella .minecraft." -ForegroundColor Red
 }
 
 if (Test-Path $userCachePath) {
@@ -80,8 +80,9 @@ if (Test-Path $userCachePath) {
         Start-Sleep -Seconds 2
     }
 } else {
-    Write-Host "Il file usercache.json non esiste nella cartella .minecraft." -ForegroundColor Red
+    Write-Host "[ERRORE] Il file usercache.json non esiste nella cartella .minecraft." -ForegroundColor Red
 }
+
 
 
 
