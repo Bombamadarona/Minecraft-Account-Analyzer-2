@@ -11,6 +11,7 @@ Questo script è stato realizzato dal server discord SS LEARN IT (https://discor
 - Legge il contenuto di `usercache.json` (se esistente) ed estrae i nomi utente registrati.
 - Controlla se gli accaunt sono SP oppure Premium
 - Mostra a schermo una lista di account trovati nei rispettivi file e mostra se un accaunt è SP oppure Premium
+- Segnala con `[Errore]` gli accaunt non esistenti o non processati correttamente
 
 # 📂 File/Database analizzati
 
