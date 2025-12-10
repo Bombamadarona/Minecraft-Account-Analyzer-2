@@ -25,7 +25,6 @@ Write-Host ""
 
 if (-not (Test-Path $minecraftPath)) {
     Write-Host "La cartella .minecraft non esiste nel percorso: $minecraftPath" -ForegroundColor Red
-    exit
 }
 
 if (-not (Test-Path $usernameCachePath)) {
@@ -172,4 +171,5 @@ Write-Host ("-" + ("=" * 58) + "-") -ForegroundColor Cyan
 Write-Host ("|" + (" " * 19) + "CONTROLLO COMPLETATO" + (" " * 19) + "|") -ForegroundColor Cyan
 Write-Host ("-" + ("=" * 58) + "-") -ForegroundColor Cyan
 Write-Host ""
+
 
